@@ -3,114 +3,91 @@
     <head>
         <title>Register</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <body>
-        <br>
-        <br>
-        <br>
-        <style>
-            body {
-                align-items: center;
-            }
-       /* Apply basic styling to the container */
-.container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+<body>
+    <style>
+        .btn {
+            background-color: blue;
+            color: #fff;
+            padding: 10px 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            align-items: center;
+        }
 
-/* Style form elements */
-.form-label {
-    font-weight: bold;
-}
-
-.form-control {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-/* Style the submit button */
-.btn {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-/* Add some spacing between the button and the "Back" button */
-.btn + br {
-    display: none;
-}
-
-/* Style the "Back" button */
-.btn-back {
-    background-color: #333;
-}
-
-/* Style links within paragraphs */
-p a {
-    text-decoration: none;
-    color: #4caf50;
-}
-
-/* Hover effect on links */
-p a:hover {
-    text-decoration: underline;
-}
-
-            
-            </style>
-        </head>
-
+        .btn:hover {
+            background-color: blueviolet;
+            color: #fff;
+            padding: 10px 15px;
+            margin: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            align-items: center;
+        }
         
-        <div class="container">
-            <h1>Register</h1>
-            <?php $LAVA =& lava_instance(); ?>
-                    <?php echo $LAVA->form_validation->errors(); ?>
-                    <?php if (isset($error_message)) { ?>
-                        <div class="alert alert-danger"><?php echo $error_message; ?></div>
-                    <?php } ?>
-        <form action="registerauth" method="post">
-        <div class="mb-3 mt-3">
-                <label for="username" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter LastName" name="LastName">
-            </div>
-            <div class="mb-3 mt-3">
-                <label for="username" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter FirstName" name="FirstName">
-            </div>
-            <div class="mb-3 mt-3">
-                <label for="username" class="form-label">Contact Number</label>
-              <input type="text" class="form-control" id="username" placeholder="Enter ContactNo" name="ContactNo">
-            </div>
-            <div class="mb-3 mt-3">
-                <label for="username" class="form-label">Email</label>
-                <input type="email" class="form-control" id="username" placeholder="Enter email" name="email">
-            </div>
-            <div class="mb-3 mt-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username">
-            </div>
-            <div class="mb-3">
-                <label for="pwd" class="form-label">Password</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password">
-            </div>
+        p a {
+            text-decoration: none;
+            color: blue;
+        }
 
-            <button type="submit" class="btn">Register</button>
-        </form>
-        <br>
-        
-        <p>Already have an account?<a href="login">Login</a></p>
-         
-    </body>
+        p a:hover {
+            text-decoration: none;
+            color: cyan;
+        }
 
-
-        
+    </style>
+</head>
+    <section class="text-center">
+        <div class="p-5 bg-image" style="background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg'); height: 300px;"></div>
+            <div class="card mx-4 mx-md-5 shadow-5-strong" style="margin-top: -100px; background: hsla(0, 0%, 100%, 0.8); backdrop-filter: blur(30px);">
+                <div class="card-body py-5 px-md-5">  
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-8">
+                            <h1>Register</h1><br>
+                                <?php $LAVA =& lava_instance(); ?>
+                                <?php echo $LAVA->form_validation->errors(); ?>
+                                <?php if (isset($error_message)) { ?>
+                                    <div class="alert alert-danger"><?php echo $error_message; ?></div>
+                                <?php } ?>
+                                <form action="registerauth" method="post">
+                                    <div class="row">
+                                        <div class="form-outline mb-4">
+                                            <label for="username" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter LastName" name="LastName">
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label for="username" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter FirstName" name="FirstName">
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label for="username" class="form-label">Contact Number</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter ContactNo" name="ContactNo">
+                                        </div>
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                        <label for="username" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="username" placeholder="Enter email" name="email">
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username">
+                                    </div>
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-4">
+                                        <label for="pwd" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password">
+                                    </div>
+                                    <!-- Submit button --> 
+                                    <button type="submit" class="btn" name="submit">Register</button>
+                                    <p>Already have an account? <a href="login">Login</a></p>
+                                    <p><a href="login">Back</a></p>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
     </body>
 </html>

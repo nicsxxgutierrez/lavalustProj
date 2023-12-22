@@ -50,9 +50,5 @@ $router->get('/reservation', 'ReservationController::getdata');
 $router->match('/registerauth', 'UserController::registerAuth', 'GET|POST');
 $router->get('/register', 'UserController::register');
 $router->post('/loginAuth', 'UserController::userLogin');
-$router->get('event', 'UserController::event');
 $router->get('/login', 'UserController::loginview');
-
-
-
-
+$router->get('event', 'UserController::event');
