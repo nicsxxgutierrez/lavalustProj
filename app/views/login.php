@@ -6,7 +6,7 @@
 
     <style>
         .btn {
-            background-color: #4caf50;
+            background-color: blue;
             color: #fff;
             padding: 10px 15px;
             border: none;
@@ -16,7 +16,7 @@
         }
 
         .btn:hover {
-            background-color: darkgreen;
+            background-color: blueviolet;
             color: #fff;
             padding: 10px 15px;
             border: none;
