@@ -17,6 +17,11 @@ class UserController extends Controller {
     public function event(){
         $this->call->view('event');
     }
+
+    public function home(){
+        $this->call->view('home');
+    }
+
     public function registerauth(){
         if($this->form_validation->submitted()){
             $this->form_validation
