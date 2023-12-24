@@ -21,6 +21,18 @@ class UserController extends Controller {
     public function home(){
         $this->call->view('home');
     }
+    
+    public function venue(){
+        $this->call->view('venue');
+    }
+
+    public function about(){
+        $this->call->view('about');
+    }
+
+    public function logout(){
+        $this->call->view('login');
+    }
 
     public function registerauth(){
         if($this->form_validation->submitted()){

@@ -53,3 +53,6 @@ $router->post('/loginAuth', 'UserController::userLogin');
 $router->get('/login', 'UserController::loginview');
 $router->get('event', 'UserController::event');
 $router->get('home', 'UserController::home');
+$router->get('venue', 'UserController::venue');
+$router->get('about', 'UserController::about');
+$router->get('logout', 'UserController::logout');

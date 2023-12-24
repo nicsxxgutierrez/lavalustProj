@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Event Management System</title>
+  <title>Home</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
@@ -20,11 +20,11 @@
   <script type="text/javascript" src="admin/assets/js/jquery.datetimepicker.full.min.js"></script>
 
     <style>
-        header.masthead {
-		    background-image: url("homeimg.jpg");
+      header.masthead {
+		    background-image: url("/public/homebg.jpg");
 		    background-repeat: no-repeat;
 		    background-size: cover;
-		}
+		  }
     
         #viewer_modal .btn-close {
             position: absolute;
@@ -58,8 +58,10 @@
             max-width: calc(100%);
         }
         
-        body, footer {
-            background: #000000e6 !important;
+        body{
+            background-image: url("/public/homebg.jpg");
+		    background-repeat: no-repeat;
+		    background-size: cover;
         }
 
         footer {
@@ -148,7 +150,6 @@
                     	<h3 class="text-white">Welcome to Event Management System</h3>
                         <hr class="divider my-4" />                       
                     </div>
-                    
                 </div>
             </div>
         </header>
@@ -241,7 +242,7 @@
                     </div>
                 </div>
             </div>
-                <p class="copyright">&copy;Copyright<a href="https://youtu.be/D8VEhcPeSlc?si=1Z0Jf_6w1xaFRWD9"> Event </a></p>
+                <p class="copyright">&copy;Copyright | <a href="https://youtu.be/D8VEhcPeSlc?si=1Z0Jf_6w1xaFRWD9"> Event </a></p>
         </footer>
 
           <script>

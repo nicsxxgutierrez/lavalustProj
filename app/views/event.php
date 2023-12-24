@@ -19,7 +19,6 @@
   <script type="text/javascript" src="admin/assets/js/select2.min.js"></script>
   <script type="text/javascript" src="admin/assets/js/jquery.datetimepicker.full.min.js"></script>
 
-    
     <body id="page-top">
       <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-body text-white"></div>
