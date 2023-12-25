@@ -6,7 +6,7 @@ require 'app/vendor/autoload.php';
 class AdminController extends Controller {
 
     public function home(){
-        $this->call->view('/admin/index');
+        $this->call->view('/admin/home');
     }
 
     }

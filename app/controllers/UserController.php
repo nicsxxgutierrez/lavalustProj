@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'app/vendor/autoload.php';
+require 'app/config/autoload.php';
 
 class UserController extends Controller {
 
