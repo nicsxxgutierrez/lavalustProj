@@ -56,3 +56,6 @@ $router->get('home', 'UserController::home');
 $router->get('venue', 'UserController::venue');
 $router->get('about', 'UserController::about');
 $router->get('logout', 'UserController::logout');
+$router->post('/adminregister', 'AdminController::adminRegister');
+$router->post('/adminlogin', 'AdminController::adminLogin');
+$router->get('/adminhome', 'AdminController::home');

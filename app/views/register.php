@@ -54,35 +54,32 @@
                                 <form action="registerauth" method="post">
                                     <div class="row">
                                         <div class="form-outline mb-4">
-                                            <label for="username" class="form-label">Last Name</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Enter LastName" name="LastName">
+                                            <label for="lastname" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastname" placeholder="Enter LastName" name="LastName" required>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <label for="username" class="form-label">First Name</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Enter FirstName" name="FirstName">
+                                            <label for="firstname" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstname" placeholder="Enter FirstName" name="FirstName" required>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <label for="username" class="form-label">Contact Number</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Enter ContactNo" name="ContactNo">
+                                            <label for="contactno" class="form-label">Contact Number</label>
+                                            <input type="text" class="form-control" id="contactno" placeholder="Enter ContactNo" name="ContactNo" required>
                                         </div>
-                                    <!-- Email input -->
-                                    <div class="form-outline mb-4">
-                                        <label for="username" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="username" placeholder="Enter email" name="email">
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label for="username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username">
-                                    </div>
-                                    <!-- Password input -->
-                                    <div class="form-outline mb-4">
-                                        <label for="pwd" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password">
-                                    </div>
-                                    <!-- Submit button --> 
-                                    <button type="submit" class="btn" name="submit">Register</button>
-                                    <p>Already have an account? <a href="login">Login</a></p>
-                                    <p><a href="login">Back</a></p>
+                                        <div class="form-outline mb-4">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label for="username" class="form-label">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" required>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label for="pwd" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password" required>
+                                        </div>
+                                        <button type="submit" class="btn" name="submit">Register</button>
+                                        <p>Already have an account? <a href="login">Login</a></p>
+                                        <p><a href="login">Back</a></p>
                                 </form>
                         </div>
                     </div>

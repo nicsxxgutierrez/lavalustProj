@@ -19,6 +19,94 @@
   <script type="text/javascript" src="admin/assets/js/select2.min.js"></script>
   <script type="text/javascript" src="admin/assets/js/jquery.datetimepicker.full.min.js"></script>
 
+    <style>
+    	header.masthead {
+		  background-image: url("homeimg.jpg");
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+    
+  #viewer_modal .btn-close {
+    position: absolute;
+    z-index: 999999;
+    /*right: -4.5em;*/
+    background: unset;
+    color: white;
+    border: unset;
+    font-size: 27px;
+    top: 0;
+}
+#viewer_modal .modal-dialog {
+        width: 80%;
+    max-width: unset;
+    height: calc(90%);
+    max-height: unset;
+}
+  #viewer_modal .modal-content {
+       background: black;
+    border: unset;
+    height: calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #viewer_modal img,#viewer_modal video{
+    max-height: calc(100%);
+    max-width: calc(100%);
+  }
+  body, footer {
+    background: #000000e6 !important;
+}
+#portfolio .img-fluid{
+    width: calc(100%);
+    height: 30vh;
+    z-index: -1;
+    position: relative;
+    padding: 1em;
+}
+.event-list{
+cursor: pointer;
+}
+span.hightlight{
+    background: yellow;
+}
+.banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 26vh;
+        width: calc(30%);
+    }
+    .banner img{
+        width: calc(100%);
+        height: calc(100%);
+        cursor :pointer;
+    }
+.event-list{
+cursor: pointer;
+border: unset;
+flex-direction: inherit;
+}
+
+.event-list .banner {
+    width: calc(40%)
+}
+.event-list .card-body {
+    width: calc(60%)
+}
+.event-list .banner img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    min-height: 50vh;
+}
+span.hightlight{
+    background: yellow;
+}
+.banner{
+   min-height: calc(100%)
+}
+ 
+    </style>
     <body id="page-top">
       <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-body text-white"></div>

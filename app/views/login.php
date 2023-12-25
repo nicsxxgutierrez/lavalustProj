@@ -39,20 +39,18 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
                             <h2 class="fw-bold mb-5">Login Now</h2>
-                                <form action="loginAuth" method="POST">
+                                <form action="loginAuth" method="post">
                                     <div class="mb-3 mt-3">
-                                        <label for="username" class="form-label des">Username</label>
-                                        <input type="email" class="form-control" id="username" placeholder="Enter Username" name="email"  required > 
+                                    <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="pwd" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password"  required >
+                                        <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="password" required>
                                     </div>
+                                    <button type="submit" class="btn" name="submit">Log in</button><br><br>
+                                    <p>Don't have an account yet? <a href="register">SignUp</a></p>
                                 </form>
-                                    <form action="event">
-                                        <button type="submit" class="btn">Log in</button><br><br>
-                                    </form>
-                                        <p>Don't have an account yet? <a href="register">SignUp</a></p>
                         </div>
                     </div>
                 </div>

@@ -23,6 +23,7 @@ class UserController extends Controller {
     }
     
     public function venue(){
+        $this->call->model('Venue_model');
         $this->call->view('venue');
     }
 
@@ -49,20 +50,19 @@ class UserController extends Controller {
             ->min_length('4')
             ->name('email')->required()
             ->min_length('3')
-            
             ->name('password')->required()
             ->min_length('6');
             if($this->form_validation->run())
             {
-             if($this->User_model->register($this->io->post('LastName'), $this->io->post('FirstName'), $this->io->post('ContactNo'), $this->io->post('username'), $this->io->post('email'), password_hash($this->io->post('password'), PASSWORD_DEFAULT))){
-                $this->session->set_flashdata(array('status'=> 'Data was Successfully Added'));
+                if($this->User_model->register($this->io->post('LastName'), $this->io->post('FirstName'), $this->io->post('ContactNo'), $this->io->post('username'), $this->io->post('email'), password_hash($this->io->post('password'), PASSWORD_DEFAULT))){
+                    $this->session->set_flashdata(array('status'=> 'Data was Successfully Added'));
 
-                $this->call->view('login');
-             }   
-             else{
-                $this->form_validation->errors();
-               
-             }
+                    $this->call->view('login');
+                }   
+                else{
+                    $this->form_validation->errors();
+                
+                }
             }
             else{
                 return redirect('register');
@@ -87,7 +87,7 @@ class UserController extends Controller {
         }
 
         if($password !== $user['password']) {
-            $this->call->view('reservation/reservation');
+            $this->call->view('event');
         }
         else{
             $this->call->view('reservation/reservation');
