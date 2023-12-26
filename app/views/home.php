@@ -24,13 +24,12 @@
 		    background-size: cover;
 		  }
 
-      body{
+      body {
         background-image: url('/public/homebg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
       }
 
       footer {
+        background: #000000e6 !important;
         position: relative;
         height: 350px;
         width: 100%;

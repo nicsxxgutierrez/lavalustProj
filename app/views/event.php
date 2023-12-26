@@ -12,101 +12,42 @@
   <link href="admin/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
   <link href="admin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
-  <link href="public/css/styles.css" rel="stylesheet" />
+  <link href="public/admin/css/styles.css" rel="stylesheet" />
   <link href="admin/assets/css/select2.min.css" rel="stylesheet">
   <script src="admin/assets/vendor/jquery/jquery.min.js"></script>
   <script src="admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
   <script type="text/javascript" src="admin/assets/js/select2.min.js"></script>
   <script type="text/javascript" src="admin/assets/js/jquery.datetimepicker.full.min.js"></script>
 
-    <style>
-    	header.masthead {
-		  background-image: url("homeimg.jpg");
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		}
-    
-  #viewer_modal .btn-close {
-    position: absolute;
-    z-index: 999999;
-    /*right: -4.5em;*/
-    background: unset;
-    color: white;
-    border: unset;
-    font-size: 27px;
-    top: 0;
-}
-#viewer_modal .modal-dialog {
-        width: 80%;
-    max-width: unset;
-    height: calc(90%);
-    max-height: unset;
-}
-  #viewer_modal .modal-content {
-       background: black;
-    border: unset;
-    height: calc(100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #viewer_modal img,#viewer_modal video{
-    max-height: calc(100%);
-    max-width: calc(100%);
-  }
-  body, footer {
-    background: #000000e6 !important;
-}
-#portfolio .img-fluid{
-    width: calc(100%);
-    height: 30vh;
-    z-index: -1;
-    position: relative;
-    padding: 1em;
-}
-.event-list{
-cursor: pointer;
-}
-span.hightlight{
-    background: yellow;
-}
-.banner{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 26vh;
-        width: calc(30%);
-    }
-    .banner img{
-        width: calc(100%);
-        height: calc(100%);
-        cursor :pointer;
-    }
-.event-list{
-cursor: pointer;
-border: unset;
-flex-direction: inherit;
-}
+  <style>
+      header.masthead {
+		    background-image: url('/public/homebg.jpg');
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		  }
 
-.event-list .banner {
-    width: calc(40%)
-}
-.event-list .card-body {
-    width: calc(60%)
-}
-.event-list .banner img {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    min-height: 50vh;
-}
-span.hightlight{
-    background: yellow;
-}
-.banner{
-   min-height: calc(100%)
-}
- 
-    </style>
+      body {
+        background-image: url('/public/homebg.jpg');
+      }
+
+      footer {
+        background: #000000e6 !important;
+        position: relative;
+        height: 350px;
+        width: 100%;
+        background-color: #333333;
+      }
+
+      p.copyright {
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        font-size: 1em;
+        text-align: center;
+        bottom: 0;
+      }
+  </style>
+    
     <body id="page-top">
       <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-body text-white"></div>
@@ -130,83 +71,5 @@ span.hightlight{
           $page = isset($_GET['page']) ?$_GET['page'] : "home";
           include $page.'.php';
         ?>
-       
-    <div class="modal fade" id="confirm_modal" role='dialog'>
-      <div class="modal-dialog modal-md" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Confirmation</h5>
-          </div>
-          <div class="modal-body">
-            <div id="delete_content"></div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" id='confirm' onclick="">Continue</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="uni_modal" role='dialog'>
-      <div class="modal-dialog modal-md" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-          <h5 class="modal-title"></h5>
-        </div>
-        <div class="modal-body">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        </div>
-        </div>
-      </div>
-    </div>
-  
-  <div class="modal fade" id="uni_modal_right" role='dialog'>
-    <div class="modal-dialog modal-full-height  modal-md" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span class="fa fa-arrow-righ t"></span>
-        </button>
-      </div>
-      <div class="modal-body">
-      </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="viewer_modal" role='dialog'>
-    <div class="modal-dialog modal-md" role="document">
-      <div class="modal-content">
-              <button type="button" class="btn-close" data-dismiss="modal"><span class="fa fa-times"></span></button>
-              <img src="" alt="">
-      </div>
-    </div>
-  </div>
-          <script>
-            $('.read_more').click(function(){
-                location.href = "event"+$(this).attr('data-id')
-            })
-            $('.banner img').click(function(){
-               viewer_modal($(this).attr('src'))
-            })
-            $('#filter').keyup(function(e){
-              var filter = $(this).val()
-              $('.card.event-list .filter-txt').each(function(){
-                var txto = $(this).html();
-                  txt = txto
-                  if((txt.toLowerCase()).includes((filter.toLowerCase())) == true){
-                    $(this).closest('.card').toggle(true)
-                  }
-                  else
-                  {
-                    $(this).closest('.card').toggle(false)        
-                  }
-              })
-            })
-          </script>
     </body>
 </html>

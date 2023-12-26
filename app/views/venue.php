@@ -34,6 +34,10 @@
             padding: 1em;
         }
 
+        body {
+            background-image: url('/public/homebg.jpg');
+        }
+
         .venue-list{
             cursor: pointer;
             border: unset;
@@ -80,6 +84,7 @@
         }
 
         footer {
+            background: #000000e6 !important;
             position: absolute;
             height: 350px;
             width: 100%;

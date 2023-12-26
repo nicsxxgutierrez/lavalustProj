@@ -8,19 +8,58 @@
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-    <link href="admin/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
+    <link href="public/admin/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <link href="public/admin/css/bootstrap-datepicker.css" rel="stylesheet" />
     <link href="public/admin/css/styles.css" rel="stylesheet" />
-    <link href="public/assets/select2.min.css" rel="stylesheet">
-    <script src="admin/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="admin/assets/js/select2.min.js"></script>
-    <script type="text/javascript" src="public/assets/jquery.datetimepicker.full.min.js"></script>
+    <link href="public/assets/css/select2.min.css" rel="stylesheet">
+    <script src="public/assets/jquery/jquery.min.js"></script>
+    <script src="public/assets/jquery/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="public/assets/jquery/select2.min.js"></script>
+    <script type="text/javascript" src="public/assets/jquery/jquery.datetimepicker.full.min.js"></script>
 
 </head>
 <body>
     <style>
+        body{
+            background: #80808045;
+        }
+        .modal-dialog.large {
+            width: 80% !important;
+            max-width: unset;
+        }
+        .modal-dialog.mid-large {
+            width: 50% !important;
+            max-width: unset;
+        }
+        #viewer_modal .btn-close {
+            position: absolute;
+            z-index: 999999;
+            /*right: -4.5em;*/
+            background: unset;
+            color: white;
+            border: unset;
+            font-size: 27px;
+            top: 0;
+        }
+        #viewer_modal .modal-dialog {
+                width: 80%;
+            max-width: unset;
+            height: calc(90%);
+            max-height: unset;
+        }
+        #viewer_modal .modal-content {
+            background: black;
+            border: unset;
+            height: calc(100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #viewer_modal img,#viewer_modal video{
+            max-height: calc(100%);
+            max-width: calc(100%);
+        }
         span.float-right.summary_icon {
             font-size: 3rem;
             position: absolute;
@@ -59,29 +98,29 @@
 		text-indent:10px;
         }
         nav#sidebar{
-            background: white !important
+            background: black !important
         }
     </style>
-        <nav class="navbar navbar-light fixed-top bg-primary" style="padding:0;min-height: 3.5rem">
+        <nav class="navbar navbar-light fixed-top bg-primary" style="padding:0;min-height: 4rem">
             <div class="container-fluid mt-2 mb-2">
                 <div class="col-lg-12">
-                    <div class="col-md-1 float-left" style="display: flex;">
+                    <div class="col-md-1 float-left" style="display: flex;"></div>
+                    <div class="col-md-4 float-left text-white">
+                        <large><b>Event Management System</b></large>
                     </div>
-                <div class="col-md-4 float-left text-white">
-                    <large><b>Event Management System</b></large>
-                </div>
                     <div class="float-right">
-                    <div class=" dropdown mr-4">
-                        <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrator </a>
-                            <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
-                                <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
-                                <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
-                            </div>
+                        <div class=" dropdown mr-4">
+                            <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrator </a>
+                                <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
+                                    <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
+                                    <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
+                                </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <nav id="sidebar" class='mx-lt-5 bg-dark' >
-                <div class="sidebar-list">
+            
+                <nav id="sidebar" class='mx-lt-5 bg-dark' >
+                    <div class="sidebar-list">
                         <a href="/admin/home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Home</a>
                         <a href="/admin/venue_booking" class="nav-item nav-booking"><span class='icon-field'><i class="fa fa-th-list"></i></span> Venue Book List</a>
                         <a href="index.php?page=audience" class="nav-item nav-audience"><span class='icon-field'><i class="fa fa-th-list"></i></span> Event Audience List</a>
@@ -94,19 +133,21 @@
                         </div>
                         <a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Users</a>
                         <a href="index.php?page=site_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cogs"></i></span> System Settings</a>
-                </div>
-            </nav>
-            <div class="containe-fluid">
+                    </div>
+                </nav>
+                <div class="containe-fluid">
                     <div class="row mt-3 ml-3 mr-3">
                         <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <?php echo "Welcome Back Administrator!" ?>
-                                    <hr>
-                                </div>
-                            </div>      			
+                        <div class="card">
+                            <div class="card-body">
+                                <?php echo "Welcome Back Administrator!" ?>
+                                <hr>
+                            </div>
+                        </div>      			
                         </div>
                     </div>
                 </div>
+            </div>
+        </nav>
 </body>
 </html>

@@ -17,35 +17,34 @@
     <script type="text/javascript" src="admin/assets/js/select2.min.js"></script>
     <script type="text/javascript" src="admin/assets/js/jquery.datetimepicker.full.min.js"></script>
 </head>
-<style>
-      header.masthead {
-		    background-image: url("/public/homebg.jpg");
-		    background-repeat: no-repeat;
-		    background-size: cover;
-		  }
-
-      body{
+    <style>
+    header.masthead {
         background-image: url("/public/homebg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        }
+	}
 
-        footer {
-            position: relative;
-            height: 350px;
-            width: 100%;
-            background-color: #333333;
-        }
+    body {
+        background-image: url('/public/homebg.jpg');
+    }
 
-        p.copyright {
-            position: absolute;
-            width: 100%;
-            color: #fff;
-            line-height: 40px;
-            font-size: 1.5em;
-            text-align: center;
-            bottom: 0;
-        }
+    footer {
+        background: #000000e6 !important;
+        position: relative;
+        height: 350px;
+        width: 100%;
+        background-color: #333333;
+    }
+
+    p.copyright {
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        line-height: 40px;
+        font-size: 1.5em;
+        text-align: center;
+        bottom: 0;
+    }
     </style>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
