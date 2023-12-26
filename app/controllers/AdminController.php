@@ -1,9 +1,32 @@
 <?php
 defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
-require 'app/vendor/autoload.php';
+require 'app/config/autoload.php';
 
 class AdminController extends Controller {
+
+        public function login(){
+            $username = $this->io->post('username');
+            $password = $this->io->post('password');
+    
+            $data = [
+                'username' => $username,
+                'password' => $password
+            ];
+    
+            $user = $this->Admin_model->get_user_by_username($username);
+    
+            if(is_null($user)) {
+                $this->call->view('/admin/login');
+            }
+            if($password !== $user['password']) {
+                $this->call->view('/admin/home');
+            }
+        }
+        
+        public function loginview(){
+            $this->call->view('/admin/login');
+        }
 
         public function home(){
             $this->call->view('/admin/home');

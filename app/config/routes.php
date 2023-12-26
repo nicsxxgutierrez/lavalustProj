@@ -60,9 +60,9 @@ $router->get('about', 'UserController::about');
 $router->get('logout', 'UserController::logout');
 
 /*  For Adminside */
-$router->post('/adminregister', 'AdminController::adminRegister');
-$router->post('/adminlogin', 'AdminController::adminLogin');
-$router->get('/adminhome', 'AdminController::home');
+$router->post('/adminregister', 'AdminController::register');
+$router->post('/adminlogin', 'AdminController::login');
+$router->get('/adminuserlogin', 'AdminController::loginview');
 $router->get('/adminhome', 'AdminController::home');
 $router->get('/adminvenue_book', 'AdminController::venue');
 $router->get('/adminevent', 'AdminController::event');
