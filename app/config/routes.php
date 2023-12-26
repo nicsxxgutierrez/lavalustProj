@@ -48,6 +48,8 @@ $router->get('/', 'Welcome::index');
 $router->post('/save', 'ReservationController::save');
 $router->get('/reservation', 'ReservationController::getdata');
 $router->match('/registerauth', 'UserController::registerAuth', 'GET|POST');
+
+/*  For Userside */
 $router->get('/register', 'UserController::register');
 $router->post('/loginAuth', 'UserController::userLogin');
 $router->get('/login', 'UserController::loginview');
@@ -56,6 +58,16 @@ $router->get('home', 'UserController::home');
 $router->get('venue', 'UserController::venue');
 $router->get('about', 'UserController::about');
 $router->get('logout', 'UserController::logout');
+
+/*  For Adminside */
 $router->post('/adminregister', 'AdminController::adminRegister');
 $router->post('/adminlogin', 'AdminController::adminLogin');
 $router->get('/adminhome', 'AdminController::home');
+$router->get('/adminhome', 'AdminController::home');
+$router->get('/adminvenue_book', 'AdminController::venue');
+$router->get('/adminevent', 'AdminController::event');
+$router->get('/adminvenues', 'AdminController::venues');
+$router->get('/adminaudience_report', 'AdminController::audience_report');
+$router->get('/adminvenue_report', 'AdminController::venue_report');
+$router->get('/adminusers', 'AdminController::users');
+$router->get('/adminsite_settings', 'AdminController::site_set');
