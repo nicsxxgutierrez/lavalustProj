@@ -19,7 +19,7 @@
 
     <style>
       header.masthead {
-		    background-image: url('/public/homebg.jpg');
+		    background: url("homebg.jpg");
 		    background-repeat: no-repeat;
 		    background-size: cover;
 		  }

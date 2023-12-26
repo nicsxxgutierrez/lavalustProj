@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Home</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="public/admin/assets/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="public/admin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="public/admin/assets/DataTables/datatables.min.css" rel="stylesheet">
     <link href="public/admin/assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-    <link href="public/admin/css/bootstrap-datepicker.css" rel="stylesheet" />
-    <link href="public/admin/css/styles.css" rel="stylesheet" />
-    <link href="public/assets/css/select2.min.css" rel="stylesheet">
-    <script src="public/assets/jquery/jquery.min.js"></script>
-    <script src="public/assets/jquery/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="public/assets/jquery/select2.min.js"></script>
-    <script type="text/javascript" src="public/assets/jquery/jquery.datetimepicker.full.min.js"></script>
+    <link href="public/admin/assets/css/select2.min.css" rel="stylesheet">
+    <link href="public/admin/assets/css/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="public/admin/assets/css/jquery-te-1.4.0.css">
 
 </head>
 <body>
@@ -43,7 +46,7 @@
             top: 0;
         }
         #viewer_modal .modal-dialog {
-                width: 80%;
+            width: 80%;
             max-width: unset;
             height: calc(90%);
             max-height: unset;
@@ -94,14 +97,16 @@
             max-height: calc(100%)!important;
             max-width: calc(100%)!important;
         }
+
         .collapse a{
-		text-indent:10px;
+		    text-indent:10px;
         }
         nav#sidebar{
             background: black !important
         }
     </style>
-        <nav class="navbar navbar-light fixed-top bg-primary" style="padding:0;min-height: 4rem">
+
+        <nav class="navbar navbar-light fixed-top bg-primary" style="padding:0;min-height: 4.5rem">
             <div class="container-fluid mt-2 mb-2">
                 <div class="col-lg-12">
                     <div class="col-md-1 float-left" style="display: flex;"></div>
@@ -115,39 +120,66 @@
                                     <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
                                     <a class="dropdown-item" href="ajax.php?action=logout"><i class="fa fa-power-off"></i> Logout</a>
                                 </div>
-                        </div>
-                    </div>
+            </div>
+        </nav>
+        <br><br><br>
+        <nav id="sidebar" class='mx-lt-5 bg-dark' >
+            <div class="sidebar-list">
+                <a href="/admin/home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Home</a>
+                <a href="/admin/venue_booking" class="nav-item nav-booking"><span class='icon-field'><i class="fa fa-th-list"></i></span> Venue Book List</a>
+                <a href="index.php?page=audience" class="nav-item nav-audience"><span class='icon-field'><i class="fa fa-th-list"></i></span> Event Audience List</a>
+                <a href="index.php?page=venue" class="nav-item nav-venue"><span class='icon-field'><i class="fa fa-map-marked-alt"></i></span> Venues</a>
+                <a href="index.php?page=events" class="nav-item nav-events"><span class='icon-field'><i class="fa fa-calendar"></i></span> Events</a>
+                <a  class="nav-item nav-reports" data-toggle="collapse" href="#reportCollpase" role="button" aria-expanded="false" aria-controls="reportCollpase"><span class='icon-field'><i class="fa fa-file"></i></span> Reports <i class="fa fa-angle-down float-right"></i></a>
+                <div class="collapse" id="reportCollpase">
+                    <a href="index.php?page=audience_report" class="nav-item nav-audience_report"><span class='icon-field'></span> Audience Report</a>
+                    <a href="index.php?page=venue_report" class="nav-item nav-venue_report"><span class='icon-field'></span> Venue Report</a>
                 </div>
-            
-                <nav id="sidebar" class='mx-lt-5 bg-dark' >
-                    <div class="sidebar-list">
-                        <a href="/admin/home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Home</a>
-                        <a href="/admin/venue_booking" class="nav-item nav-booking"><span class='icon-field'><i class="fa fa-th-list"></i></span> Venue Book List</a>
-                        <a href="index.php?page=audience" class="nav-item nav-audience"><span class='icon-field'><i class="fa fa-th-list"></i></span> Event Audience List</a>
-                        <a href="index.php?page=venue" class="nav-item nav-venue"><span class='icon-field'><i class="fa fa-map-marked-alt"></i></span> Venues</a>
-                        <a href="index.php?page=events" class="nav-item nav-events"><span class='icon-field'><i class="fa fa-calendar"></i></span> Events</a>
-                        <a  class="nav-item nav-reports" data-toggle="collapse" href="#reportCollpase" role="button" aria-expanded="false" aria-controls="reportCollpase"><span class='icon-field'><i class="fa fa-file"></i></span> Reports <i class="fa fa-angle-down float-right"></i></a>
-                        <div class="collapse" id="reportCollpase">
-                            <a href="index.php?page=audience_report" class="nav-item nav-audience_report"><span class='icon-field'></span> Audience Report</a>
-                            <a href="index.php?page=venue_report" class="nav-item nav-venue_report"><span class='icon-field'></span> Venue Report</a>
-                        </div>
-                        <a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Users</a>
-                        <a href="index.php?page=site_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cogs"></i></span> System Settings</a>
-                    </div>
-                </nav>
-                <div class="containe-fluid">
-                    <div class="row mt-3 ml-3 mr-3">
-                        <div class="col-lg-12">
+                <a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Users</a>
+                <a href="index.php?page=site_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cogs"></i></span> System Settings</a>
+            </div>
+        </nav>
+
+        <main id="view-panel" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <?php echo "Welcome Back Administrator!" ?>
+                                <p>Welcome Back Administrator!</p>
                                 <hr>
                             </div>
                         </div>      			
-                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
+        </main>
+
+            <script>
+                $('.nav_collapse').click(function(){
+                    console.log($(this).attr('href'))
+                    $($(this).attr('href')).collapse()
+                })
+                $('.nav-<?php echo isset($_GET['page']) ? $_GET['page'] : '' ?>').addClass('active')
+
+                $('#manage_my_account').click(function(){
+                    uni_modal("Manage Account","manage_user.php?id=<?php echo $_SESSION['login_id'] ?>&mtype=own")
+                })
+            </script>
+
+            <script src="public/admin/assets/vendor/jquery/jquery.min.js"></script>
+            <script src="public/admin/assets/DataTables/datatables.min.js"></script>
+            <script src="public/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="public/admin/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+            <script src="public/admin/assets/vendor/php-email-form/validate.js"></script>
+            <script src="public/admin/assets/vendor/venobox/venobox.min.js"></script>
+            <script src="public/admin/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+            <script src="public/admin/assets/vendor/counterup/counterup.min.js"></script>
+            <script src="public/admin/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+            <script src="public/admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+            <script type="text/javascript" src="public/admin/assets/js/select2.min.js"></script>
+            <script type="text/javascript" src="public/admin/assets/js/jquery.datetimepicker.full.min.js"></script>
+            <script type="text/javascript" src="public/admin/assets/font-awesome/js/all.min.js"></script>
+            <script type="text/javascript" src="public/admin/assets/js/jquery-te-1.4.0.min.js" charset="utf-8"></script>
 </body>
 </html>
