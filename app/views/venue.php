@@ -334,5 +334,15 @@
                 </div>
                     <p class="copyright">&copy;Copyright | <a href="https://youtu.be/D8VEhcPeSlc?si=1Z0Jf_6w1xaFRWD9"> Event </a></p>
             </footer>
+
+            <script>
+                $('.book-venue').click(function(){
+                    uni_modal("Submit Booking Request","booking.php?venue_id="+$(this).attr('data-id'))
+                })
+                $('.venue-list .carousel img').click(function(){
+                    viewer_modal($(this).attr('src'))
+                })
+
+            </script>
   </body>
 </html>
